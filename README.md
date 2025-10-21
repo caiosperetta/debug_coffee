@@ -1,4 +1,4 @@
-# ☕ Coffee Shop App ☕
+# ☕ Debug Coffee App ☕
 
 ## 🌟 Um Aplicativo Completo de Cafeteria em React Native & Expo 🌟
 
@@ -18,7 +18,7 @@ Este projeto foi desenvolvido no **Expo Snack** e pode ser executado instantanea
 2.  Abra o app Expo Go.
 3.  Toque em "Escanear QR Code" e aponte para a imagem abaixo:
 
-![QR Code do Projeto](image_05617d.png)
+![QR Code do Projeto](image_05617.png)
 
 *(Se a imagem não carregar no GitHub, certifique-se de que o arquivo `image_05617d.png` foi enviado para o repositório).*
 
