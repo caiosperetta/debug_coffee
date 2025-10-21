@@ -18,9 +18,10 @@ Este projeto foi desenvolvido no **Expo Snack** e pode ser executado instantanea
 2.  Abra o app Expo Go.
 3.  Toque em "Escanear QR Code" e aponte para a imagem abaixo:
 
-![QR Code do Projeto](image_05617.png)
+![QR Code do Projeto]
+<img width="264" height="264" alt="image" src="https://github.com/user-attachments/assets/3948bd69-f7a7-4032-91fc-68081149c12b" />
 
-*(Se a imagem não carregar no GitHub, certifique-se de que o arquivo `image_05617d.png` foi enviado para o repositório).*
+
 
 <br>
 
