@@ -1,88 +1,61 @@
-Debug Coffee (App de Cafeteria) ☕
-Um aplicativo completo de cafeteria e e-commerce desenvolvido em React Native e Expo. O projeto simula uma experiência completa de pedido, desde a visualização do cardápio até o checkout com pagamento por cartão de crédito animado.
+# ☕ Coffee Shop App ☕
 
-✨ Visão Geral
-Este aplicativo foi criado como um projeto de estudo para dominar conceitos-chave do desenvolvimento mobile, incluindo navegação em stack, gerenciamento de estado global com Context API e integração de animações complexas para uma melhor experiência do usuário (UX).
+## 🌟 Um Aplicativo Completo de Cafeteria em React Native & Expo 🌟
 
-## 🚀 Tecnologias Utilizadas
+> Um aplicativo completo de e-commerce para uma cafeteria, desenvolvido do zero com React Native e Expo.
+>
+> Este projeto simula uma experiência de usuário *completa*, desde a visualização do cardápio até um fluxo de pagamento 100% funcional com animações avançadas.
 
-React Native
+<br>
 
-Expo (Snack)
+## 🚀 Teste Agora Mesmo! (Expo Go)
 
-React Navigation (para navegação em stack)
+Este projeto foi desenvolvido no **Expo Snack** e pode ser executado instantaneamente no seu celular (Android ou iOS) sem nenhuma instalação.
 
-React Context API (para gerenciamento do carrinho de compras)
+### Passo a Passo
 
-React Native Reanimated (para animações avançadas)
+1.  Baixe o aplicativo **"Expo Go"** na [App Store](https://apps.apple.com/br/app/expo-go/id982107779) ou [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).
+2.  Abra o app Expo Go.
+3.  Toque em "Escanear QR Code" e aponte para a imagem abaixo:
 
-expo-av (para a tela de splash com vídeo)
+![QR Code do Projeto](image_05617d.png)
 
-📋 Funcionalidades Principais
-O aplicativo conta com um fluxo de usuário completo, dividido nas seguintes telas:
+*(Se a imagem não carregar no GitHub, certifique-se de que o arquivo `image_05617d.png` foi enviado para o repositório).*
 
-1. Splash Screen
-Uma tela de abertura imersiva que utiliza expo-av para reproduzir um vídeo (logo) em tela cheia.
+<br>
 
-Ao final do vídeo, um botão "Iniciar" aparece com uma animação de fade-in.
+## 🛠️ Tecnologias Utilizadas
 
-2. Autenticação
-Tela de Login simples (ponto de partida para futuras implementações de autenticação real).
+* ⚛️ **React Native**
+* 🍿 **Expo (Snack)**
+* 🗺️ **React Navigation** (Stack)
+* 🛒 **React Context API** (Gerenciamento de Estado Global)
+* 🎞️ **React Native Reanimated** (Animações)
+* 📹 `expo-av` (Player de Vídeo)
+* 💳 `expo-payments` (simulação de pagamento)
 
-3. Cardápio (Menu Screen)
-Exibição dos produtos da cafeteria (cafés, doces, etc.) em cards estilizados.
+<br>
 
-Feedback Visual: Ao clicar em "Adicionar", o usuário vê uma animação do item "voando" em direção ao ícone do carrinho.
+## 📋 Funcionalidades Principais
 
-Ícones Flutuantes:
+### 🎥 Splash Screen
+* **Tela de Abertura Imersiva:** Utiliza `expo-av` para reproduzir um vídeo da marca em tela cheia (hospedado no Cloudinary).
+* **Botão Dinâmico:** Um botão "Iniciar" aparece com uma animação de *fade-in* assim que o vídeo termina.
 
-Ícone de Perfil: Personalizado com a imagem da marca.
+### 💳 Fluxo de Pagamento Completo
+* **Seleção de Pagamento:** O usuário escolhe entre Cartão de Crédito, Pix ou Dinheiro.
+* **Cartão 3D Animado:** Uma tela de formulário com um cartão que **vira em 3D** (`flip`) quando o usuário foca no campo CVV.
+* **Detecção de Bandeira:** O cartão **muda de cor e marca** (Visa, Mastercard, etc.) em tempo real, conforme o usuário digita.
+* **Confirmação:** Tela final de "Pedido Confirmado" que limpa o carrinho e permite um novo pedido.
 
-Ícone de Carrinho: Possui um "badge" (contador) que atualiza em tempo real a quantidade de itens no carrinho.
+### 🛒 Carrinho de Compras (Context API)
+* **Gerenciamento Global:** O estado do carrinho é gerenciado globalmente usando a `Context API` do React.
+* **Feedback Visual:** Animação do item "voando" para o carrinho no momento da adição.
+* **Contador (Badge):** Ícone do carrinho na tela de Menu possui um "badge" que atualiza em tempo real a quantidade de itens.
 
-4. Gerenciamento de Carrinho (CartContext)
-O estado do carrinho é gerenciado globalmente usando a Context API do React.
+### 📱 Navegação e UX
+* **Fluxo Completo:** Navegação em Stack: `Splash` ➔ `Login` ➔ `Menu` ➔ `Carrinho` ➔ `Pagamento`.
+* **Ícones Personalizados:** Ícone de Perfil com a imagem da marca e ícones flutuantes estilizados.
+* **Formulários Inteligentes:** O teclado é gerenciado com `KeyboardAvoidingView` e `keyboardShouldPersistTaps` para uma digitação fluida.
 
-Funções disponíveis: addToCart, removeFromCart, clearCart.
-
-O totalItemsInCart é calculado e disponibilizado para o contador (badge).
-
-5. Tela do Carrinho (Cart Screen)
-Lista todos os itens adicionados, suas quantidades e preços.
-
-Calcula e exibe o Total do Pedido.
-
-Permite ao usuário remover itens ou limpar o carrinho completamente.
-
-Botão "Finalizar Compra" que inicia o fluxo de pagamento.
-
-6. Fluxo de Pagamento (Checkout)
-O checkout é dividido em 3 etapas:
-
-Seleção de Pagamento: O usuário escolhe entre Cartão de Crédito, Pix ou Dinheiro.
-
-Pagamento com Cartão:
-
-Uma tela de formulário com uma animação de cartão 3D que "vira" (flip) quando o usuário foca no campo CVV.
-
-Detecção de Bandeira: O cartão muda de cor e exibe a marca (Visa, Mastercard, etc.) automaticamente conforme o usuário digita o número.
-
-Formatação de inputs (número do cartão, validade).
-
-Integração com o KeyboardAvoidingView para garantir que o teclado não cubra os campos.
-
-Confirmação de Pedido:
-
-Tela final que exibe um "check" de sucesso.
-
-Limpa o carrinho (clearCart()) e oferece um botão para "Fazer Novo Pedido", que navega de volta ao Menu.
-
-⚙️ Como Executar
-Este projeto foi desenvolvido utilizando o Expo Snack, o que permite que ele seja executado diretamente no navegador ou no aplicativo Expo Go (Android/iOS) sem necessidade de instalação local.
-
-Acesse o link do Snack: [<img width="264" height="264" alt="image" src="https://github.com/user-attachments/assets/b5979a88-0baf-45cd-9b4d-f56a270091c8" />
-]
-
-No seu celular, abra o app Expo Go.
-
-Escaneie o QR Code exibido no Snack.
+---
